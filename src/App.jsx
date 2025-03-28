@@ -31,18 +31,18 @@ const App = () => {
       canvasRef.current = canvas;
 
       // Load image into canvas
-      fabric.Image.fromURL(selectedImage, (img) => {
-        img.set({
-          left: 50,
-          top: 50,
-          scaleX: 0.5,
-          scaleY: 0.5,
-        });
-        canvas.add(img);
-        canvas.centerObject(img);
-        canvas.setActiveObject(img);
-        canvas.renderAll();
-      });
+      // fabric.Image.fromURL(selectedImage, (img) => {
+      //   img.set({
+      //     left: 50,
+      //     top: 50,
+      //     scaleX: 0.5,
+      //     scaleY: 0.5,
+      //   });
+      //   canvas.add(img);
+      //   canvas.centerObject(img);
+      //   canvas.setActiveObject(img);
+      //   canvas.renderAll();
+      // });
 
       let imageElement = document.createElement("img");
       imageElement.src = selectedImage;
