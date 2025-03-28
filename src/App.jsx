@@ -22,82 +22,6 @@ const App = () => {
       console.error("Error fetching images:", error);
     }
   };
-
-  // useEffect(() => {
-  //   if (selectedImage) {
-  //     const canvas = new fabric.Canvas("canvas");
-  //     canvasRef.current = canvas;
-
-  //     fabric.Image.fromURL(selectedImage, (img) => {
-  //       img.set({ left: 50, top: 50, scaleX: 0.5, scaleY: 0.5 });
-  //       canvas.add(img);
-  //       canvas.renderAll();
-  //     });
-
-  //     return () => {
-  //       canvas.dispose();
-  //     };
-  //   }
-  // }, [selectedImage]);
-
-  // // // Add text to canvas
-  // const addText = () => {
-  //   const canvas = canvasRef.current;
-  //   const text = new Text("Your Caption", {
-  //     left: 100,
-  //     top: 100,
-  //     fontSize: 20,
-  //     fill: "black",
-  //     editable: true,
-  //   });
-  //   canvas.add(text);
-  // };
-
-  // // // Add shapes to canvas
-  // const addShape = (shape) => {
-  //   const canvas = canvasRef.current;
-  //   let newShape;
-  //   switch (shape) {
-  //     case "rectangle":
-  //       newShape = new Rect({
-  //         left: 50,
-  //         top: 50,
-  //         fill: "red",
-  //         width: 100,
-  //         height: 60,
-  //       });
-  //       break;
-  //     case "circle":
-  //       newShape = new Circle({ left: 80, top: 80, fill: "blue", radius: 40 });
-  //       break;
-  //     case "triangle":
-  //       newShape = new Triangle({
-  //         left: 120,
-  //         top: 120,
-  //         fill: "green",
-  //         width: 80,
-  //         height: 80,
-  //       });
-  //       break;
-  //     default:
-  //       return;
-  //   }
-  //   canvas.add(newShape);
-  // };
-
-  // // // Download the modified image
-  // const downloadImage = () => {
-  //   const canvas = canvasRef.current;
-  //   const dataURL = canvas.toDataURL({ format: "png" });
-
-  //   const link = document.createElement("a");
-  //   link.href = dataURL;
-  //   link.download = "edited-image.png";
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
-
   // Initialize fabric.js canvas
   useEffect(() => {
     if (selectedImage) {
@@ -215,7 +139,7 @@ const App = () => {
   return (
     <div className="container">
       <h1>Image Editor</h1>
-      <div>
+      <div className="search-container">
         <input
           type="text"
           placeholder="Search for images..."
